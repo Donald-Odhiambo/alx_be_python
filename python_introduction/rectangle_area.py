@@ -1,7 +1,7 @@
 #Calculating the area of a Rectangle
 length = 10
 
-width =5
+width = 5
 
 area = length * width 
 
