@@ -8,11 +8,12 @@ def display_menu():
     print("4. Exit")
 
 def main():
-    shopping_list = []  # Array to store shopping items
+    shopping_list = []  # array to store shopping items
 
     while True:
-        display_menu()  # Call the menu
+        display_menu()  # call menu each loop
 
+        # Ensure choice input is a number
         try:
             choice = int(input("Enter your choice (1-4): "))
         except ValueError:
@@ -23,7 +24,7 @@ def main():
             item = input("Enter the item to add: ").strip()
             if item:
                 shopping_list.append(item)
-                print(f"'{item}' has been added to your shopping list.")
+                print(f"'{item}' added to your shopping list.")
             else:
                 print("Item name cannot be empty.")
 
@@ -31,7 +32,7 @@ def main():
             item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
-                print(f"'{item}' has been removed from your shopping list.")
+                print(f"'{item}' removed from your shopping list.")
             else:
                 print(f"'{item}' not found in the shopping list.")
 
